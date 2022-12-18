@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_13_135258) do
+ActiveRecord::Schema.define(version: 2022_12_16_191911) do
+
+  create_table "cars", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.integer "car_id", null: false
+    t.integer "number_plate", null: false
+    t.string "car_name", null: false
+    t.integer "gas", null: false
+    t.integer "interior", null: false
+    t.integer "exterior", null: false
+    t.integer "c_sheet", null: false
+    t.integer "b_sheet", null: false
+    t.integer "j_sheet", null: false
+    t.integer "etc", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", default: "", null: false
