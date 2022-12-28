@@ -1,5 +1,6 @@
 class CarsController < ApplicationController
   def index
+    @cars = Car.all
   end
 
   def new
@@ -15,7 +16,24 @@ class CarsController < ApplicationController
     end
   end
 
-private
+  def show
+    @car = Car.find(params[:id])
+  end
+
+  def edit
+    @car = Car.find(params[:id])
+  end
+
+  def update
+    @car = Car.find(params[:id])
+    if @car.update!(car_params)
+      redirect_to root_path, notice: 'good'
+    else
+      render :edit
+    end
+  end
+
+  private
   def car_params
     params.permit(:car_name, :number_plate, :interior, :exterior, :gas, :j_sheet, :c_sheet, :b_sheet)
   end

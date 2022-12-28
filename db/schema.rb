@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_20_120318) do
+ActiveRecord::Schema.define(version: 2022_12_28_022749) do
 
   create_table "cars", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "number_plate", null: false
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2022_12_20_120318) do
     t.integer "j_sheet", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "p_id"
   end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|

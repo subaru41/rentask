@@ -1,0 +1,35 @@
+<%= form_with model: @car, local: true do |f| %>
+<div class="form-group">
+<%= f.label :name, "車名" %>
+<%= f.text_field :car_name %>
+</div>
+<div class="form-group">
+<%= f.label :number, "ナンバープレート" %>
+<%= f.number_field :number_plate %>
+</div>
+<div class="form-group">
+<%= f.label :name, "内装" %>
+<%= f.select :interior, [['中OK', 1], ['中❌', 2]], { selected: 1 } %>
+</div>
+<div class="form-group">
+<%= f.label :name, "外装" %>
+<%= f.select :exterior, [['外OK', 1], ['外❌', 2]], { selected: 1 } %>
+</div>
+<div class="form-group">
+<%= f.label :name, "ガソリン" %>
+<%= f.select :gas, [['ガスOK', 1], ['ガス❌', 2]], { selected: 1 } %>
+</div>
+<div class="form-group">
+<%= f.label :name, "JS" %>
+<%= f.select :j_sheet, [['0', 1], ['1', 2],['2',3]], { selected: 1 } %>
+</div>
+<div class="form-group">
+<%= f.label :name, "CS" %>
+<%= f.select :c_sheet, [['0', 1], ['1', 2],['2',3]], { selected: 1 } %>
+</div>
+<div class="form-group">
+<%= f.label :name, "BS" %>
+<%= f.select :b_sheet, [['0', 1], ['1', 2],['2',3]], { selected: 1 } %>
+</div>
+<%= f.submit class: 'btn btn-primary' %>
+<% end %>
