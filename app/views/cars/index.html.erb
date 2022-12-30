@@ -7,28 +7,41 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col d-flex flex-column bd-highlight mb-3">
 
-  <% @cars.each do |car| %>
-  <div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333;">
+<div class="col d-flex flex-column bd-highlight mb-3">
+  <% @cars1.each do |car| %>
+    <div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333;">
       <div class="p-1 bd-highlight">
-      <% if car.id < 9 %>
-        <h4>車名・ナンバー</h4>          
+        <% if car.id < 9 %>
+          <h4>車名・ナンバー</h4>          
           <%= link_to car.car_name, car_path(car) %>
           <p><%= car.number_plate %></p>
-      <% end %>
+          <p><%= car.p_id %></p>
+        <% else %>
+          <p>空車</p>
+        <% end %>
       </div>
-  </div>
+    </div>
   <% end %>
+</div>
 
-
-
+<div class="col d-flex flex-column bd-highlight mb-3">
+  <% @cars2.each do |car| %>
+    <div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333;">
+      <div class="p-1 bd-highlight">
+        <% if car.p_id > 8 %>
+          <h4>車名・ナンバー</h4>          
+          <%= link_to car.car_name, car_path(car) %>
+          <p><%= car.number_plate %></p>
+          <p><%= car.p_id %></p>
+        <% else %>
+          <p>空車</p>
+        <% end %>
+      </div>
     </div>
-    <div class="col d-flex flex-column-reverse bd-highlight">
-      <div class="p-1 bd-highlight">Flexアイテム1</div>
-      <div class="p-1 bd-highlight">Flexアイテム2</div>
-      <div class="p-1 bd-highlight">Flexアイテム3</div>
-    </div>
+  <% end %>
+</div>
+
   </div>
 </div>
 
