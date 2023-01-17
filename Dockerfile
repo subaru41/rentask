@@ -3,7 +3,7 @@ ARG APP_NAME=rentask
 #使いたいrubyのimage名に置き換えてください
 ARG RUBY_IMAGE=ruby:2.6.4
 #使いたいnodeのversionに置き換えてください(15.14.0ではなく15とか16とかのメジャーバージョン形式で書いてください)
-ARG NODE_VERSION='16'
+ARG NODE_VERSION='19'
 #インストールするbundlerのversionに置き換えてください
 ARG BUNDLER_VERSION=2.3.17
 
