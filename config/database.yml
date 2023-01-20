@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
-  database: rentask_production
-  username: rentask
+  database: cld4jw61900979try2onthin0
+  username: cld4jw61800959try3hyjan70
   password: <%= ENV['RENTASK_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
