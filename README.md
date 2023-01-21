@@ -1,24 +1,17 @@
-# README
+# サービス概要
+勤め先のレンタカー店における業務改善サービス
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## ターゲット
+アルバイトスタッフ
 
-Things you may want to cover:
+## サービス詳細
+勤め先の店舗には駐車場がいくつかあり、貸し出しが近いものは店舗に一番近い駐車場に移動し、貸し出しの予定がないものは店舗から離れた駐車場に持っていく必要があるが、店舗と駐車場間に距離があり、混雑時において、駐車場の状況が店舗に伝わるまでに時間がかかることがある。これでは効率よく動けないため、このサービスを使い、外にいる人間が情報を入力し、中の人間が確認することで外の状況を中に素早く伝達することが出来、効率よく業務を進めることが出来る。
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 機能一覧
+- ユーザー登録機能
+- ログイン機能
+- ログアウト機能
+- 車の車名とナンバープレートを表示する機能
+- 外装の清掃状況、内装の清掃状況、ガソリンの状況、チャイルドシート等の有無が確認できる機能
+- 他店舗の車、新車の追加機能
+- 車の清掃状況などの情報を維持したまま駐車場内での位置の移動、また複数の駐車場間での移動機能 
